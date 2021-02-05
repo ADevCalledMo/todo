@@ -1,14 +1,15 @@
 import React from "react";
-import Navbar from "./components/Navbar"
-import Booklist from "./components/Booklist"
-
-
+import Navbar from "./components/Navbar";
+import Booklist from "./components/Booklist";
+import ThemeContextProvider from "../src/contexts/ThemeContext";
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <Booklist />
+      <ThemeContextProvider>
+        <Navbar />
+        <Booklist />
+      </ThemeContextProvider>
     </div>
   );
 }
